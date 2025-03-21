@@ -15,14 +15,16 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/yourusername/math-tutor-agent.git
+git clone https://github.com/Crayz129/ai-tutor.git
 cd math-tutor-agent
-Установите зависимости:
-bash
-pip install llama-index gradio chromadb langchain pytesseract pillow
 ```
 
-2. Установите Tesseract OCR:
+2. Установите зависимости:
+```bash
+pip install -r requirements.txt
+```
+
+3. Установите Tesseract OCR:
 ```bash
 # Для Ubuntu/Debian
 sudo apt-get install tesseract-ocr tesseract-ocr-rus
@@ -33,10 +35,11 @@ brew install tesseract tesseract-lang
 # Для Windows скачать установщик с https://github.com/UB-Mannheim/tesseract/wiki
 ```
 
-3. Настройте API-ключ для OpenAI (или другой LLM) :
+4. Настройте API-ключ для OpenAI (или другой LLM) :
 ```bash
 export OPENAI_API_KEY=your_api_key_here
 ```
+ИЛИ создайте .env с OPENAI_API_KEY
 
 ## Использование
 1. Запустите агента:

@@ -11,23 +11,46 @@
 - **Векторное хранилище**: Использует Chroma для хранения базы заданий и их решений
 - **Удобный интерфейс**: Взаимодействие с агентом происходит через чат-интерфейс на базе Gradio
 
-## Структура проекта
+## Установка
 
-├── src/
-│   ├── agent/
-│   │   ├── init.py
-│   │   ├── tutor_agent.py      # Основной класс агента-тьютора
-│   │   ├── memory.py           # Система контекстной памяти
-│   │   └── logic.py            # Логика тьютора для математических задач
-│   ├── utils/
-│   │   ├── init.py
-│   │   └── vector_store.py     # Векторное хранилище для базы заданий
-│   ├── app.py                  # Gradio интерфейс
-│   └── init.py
-├── data/
-│   ├── problems.json           # База задач ЕГЭ
-│   ├── concepts.json           # База математических концепций
-│   └── chroma_db/              # Директория для векторной базы данных
-├── main.py                     # Основной файл для запуска приложения
-├── test_agent.py               # Скрипт для тестирования агента
-└── README.md                   # Документация
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/yourusername/math-tutor-agent.git
+cd math-tutor-agent
+Установите зависимости:
+bash
+pip install llama-index gradio chromadb langchain pytesseract pillow
+```
+
+2. Установите Tesseract OCR:
+```bash
+# Для Ubuntu/Debian
+sudo apt-get install tesseract-ocr tesseract-ocr-rus
+
+# Для macOS
+brew install tesseract tesseract-lang
+
+# Для Windows скачать установщик с https://github.com/UB-Mannheim/tesseract/wiki
+```
+
+3. Настройте API-ключ для OpenAI (или другой LLM) :
+```bash
+export OPENAI_API_KEY=your_api_key_here
+```
+
+## Использование
+1. Запустите агента:
+```bash
+python main.py
+```
+2. Откройте веб-интерфейс по адресу http://localhost:7860/
+
+3. Взаимодействуйте с тьютором через чат:
+- Задавайте вопросы по математике
+- Отправляйте задачи для анализа
+- Показывайте свои решения для проверки
+- Просите подсказки, если затрудняетесь
+4. Для создания публичной ссылки используйте параметр --share:
+```bash
+python main.py --share
+```

@@ -1,0 +1,25 @@
+[
+    {
+      "problem_id": "unique_id",
+      "text": "Текст задачи",
+      "metadata": {
+        "type": "тип задачи",
+        "subtype": "подтип задачи",
+        "difficulty": "сложность",
+        "key_concepts": ["концепция1", "концепция2"],
+        "ege_part": 1,
+        "ege_number": 5
+      },
+      "solutions": [
+        {
+          "text": "Текст решения",
+          "metadata": {
+            "steps": ["шаг1", "шаг2"],
+            "formulas": ["формула1", "формула2"],
+            "answer": "ответ"
+          }
+        }
+      ]
+    }
+  ]
+  
